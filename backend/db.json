@@ -1,5 +1,9 @@
 {
-  "categories": ["films", "series", "cartoon"],
+  "categories": [
+    { "id": 1, "name": "films" },
+    { "id": 2, "name": "series" },
+    { "id": 3, "name": "cartoon" }
+  ],
   "films": {
     "id": 1,
     "name": "films",
