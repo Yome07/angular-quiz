@@ -24,6 +24,7 @@ export class CategoryComponent implements OnInit {
     });
 
     this.categoriesService.getAllCategories(this.categoryFilter)
-    this.categories = this.categoriesService.categories
+    // this.categories = this.categoriesService.categories
+    this.categories = [];
   }
 }
