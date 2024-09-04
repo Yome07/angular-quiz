@@ -55,7 +55,7 @@ export class QuizService {
           id: question.id,
           question: question.label,
           answers: category.answers.filter(
-            (answer: any) => answer.id === question.id
+            (answer: any) => answer.questionId === question.id
           ),
         }));
       });
