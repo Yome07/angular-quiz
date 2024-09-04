@@ -5,10 +5,11 @@ import { CategoryService } from '../shared/services/category.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss']
+  styleUrls: ['./category.component.scss'],
 })
 export class CategoryComponent implements OnInit {
-  categories = this.categoriesService.categories; 
+  categories: any[] = [];
+  filteredCategories: any[] = [];
   categoryFilter: string = '';
   categorySelected!: string;
 
@@ -16,24 +17,29 @@ export class CategoryComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private categoriesService: CategoryService
-  ) {
-    this.categoriesService.getAllCategories(this.categoryFilter)
-  }
+  ) {}
 
   ngOnInit(): void {
-    // ICI ALIMENTER this.categories = l'obserbver du service (recup le name des categ en fct de l input de la barre de recherche)
-    this.route.params.subscribe(params => {
-      // this.categoryService.;
-    });
-    console.log(this.categories)
+    this.loadCategories();
   }
 
-  setCategorySelected(selected: any): void {
-    this.categorySelected = selected
+  loadCategories(): void {
+    this.categoriesService
+      .getAllCategories(this.categoryFilter)
+      .subscribe((categories) => {
+        this.categories = categories;
+        this.filteredCategories = categories;
+      });
+  }
+
+  setCategorySelected(selected: string): void {
+    this.categorySelected = selected;
     this.router.navigate(['/quiz/admin', this.categorySelected]);
   }
 
-  search(filter: any): void {
-    this.categoriesService.getAllCategories(filter)
+  search(filter: string): void {
+    this.filteredCategories = this.categories.filter((category) =>
+      category.name.toLowerCase().includes(filter.toLowerCase())
+    );
   }
 }
