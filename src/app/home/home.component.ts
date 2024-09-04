@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
   }
 
   navigateToQuiz() {
-    this.router.navigate(['/quiz', this.playerName]);
+    // this.router.navigate(['/quiz', this.playerName]);
+    this.router.navigate(['/categories', this.playerName]);
   }
 
   confirmPseudo() {
