@@ -16,6 +16,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CategoryButtonComponent } from './category/category-button/category-button.component';
 import { CategoryComponent } from './category/category.component';
+import { SearchbarComponent } from './category/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CategoryComponent } from './category/category.component';
     LoginComponent,
     RegisterComponent,
     CategoryButtonComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

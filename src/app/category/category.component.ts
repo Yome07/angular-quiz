@@ -30,5 +30,10 @@ export class CategoryComponent implements OnInit {
 
   setCategorySelected(selected: any): void {
     this.categorySelected = selected
+    this.router.navigate(['/quiz/admin', this.categorySelected]);
+  }
+
+  search(filter: any): void {
+    this.categoriesService.getAllCategories(filter)
   }
 }

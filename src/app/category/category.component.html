@@ -1,7 +1,9 @@
 <section>
     <h2 class="category_title">Liste des catégories</h2>
     <section form>
-        <!-- <app-form></app-form> -->
+        <app-searchbar
+            (search)="search($event)"
+        ></app-searchbar>
     </section>
     <section class="category_list">
        <app-category-button *ngFor="let category of categories"
