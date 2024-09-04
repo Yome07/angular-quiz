@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from '../shared/services/category.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-category',
@@ -12,11 +13,13 @@ export class CategoryComponent implements OnInit {
   filteredCategories: any[] = [];
   categoryFilter: string = '';
   categorySelected!: string;
+  playerName:string | undefined = this.authService.user?.username;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private categoriesService: CategoryService
+    private categoriesService: CategoryService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +37,7 @@ export class CategoryComponent implements OnInit {
 
   setCategorySelected(selected: string): void {
     this.categorySelected = selected;
-    this.router.navigate(['/quiz/admin', this.categorySelected]);
+    this.router.navigate(['/quiz/', this.playerName, this.categorySelected]);
   }
 
   search(filter: string): void {
