@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-
+  categories!: any[] 
 
   constructor(
     private router: Router,
@@ -15,6 +15,7 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // ICI ALIMENTER this.categories = l'obserbver du service (recup le name des categ en fct de l input de la barre de recherche)
     this.route.params.subscribe(params => {
       // this.categoryService.;
     });
