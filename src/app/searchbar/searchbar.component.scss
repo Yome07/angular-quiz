@@ -1,0 +1,15 @@
+.input {
+  @apply px-4 py-2 border rounded;
+}
+
+.btn {
+  @apply px-4 py-2 rounded text-white;
+}
+
+.btn.bg-blue-500 {
+  @apply bg-blue-500;
+}
+
+.btn.bg-red-500 {
+  @apply bg-red-500;
+}

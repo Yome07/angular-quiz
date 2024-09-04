@@ -1,0 +1,20 @@
+<div class="flex items-center space-x-2">
+  <input
+    type="text"
+    [(ngModel)]="searchValue"
+    placeholder="Search..."
+    class="input px-4 py-2 border rounded"
+  />
+  <button
+    (click)="emitSearchValue()"
+    class="btn bg-blue-500 text-white px-4 py-2 rounded"
+  >
+    Search
+  </button>
+  <button
+    (click)="resetSearch()"
+    class="btn bg-red-500 text-white px-4 py-2 rounded"
+  >
+    Reset
+  </button>
+</div>
