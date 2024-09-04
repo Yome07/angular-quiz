@@ -12,7 +12,7 @@ export class CategoryService {
     this.http
       .get(`http://localhost:3000/categories`)
       .subscribe((categories: any) => {
-        this.categories = categories;
+        this.categories = categories.filter((category: any) => category.name.includes(categoryFilter));
         console.log(this.categories)
       });
   }

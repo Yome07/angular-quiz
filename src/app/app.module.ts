@@ -32,7 +32,7 @@ import { SearchbarComponent } from './category/searchbar/searchbar.component';
     RegisterComponent,
     CategoryButtonComponent,
     CategoryComponent,
-    SearchbarComponent
+    // SearchbarComponent
   ],
   imports: [
     BrowserModule,
