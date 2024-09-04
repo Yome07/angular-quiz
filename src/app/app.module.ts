@@ -32,6 +32,7 @@ import { SearchbarComponent } from './category/searchbar/searchbar.component';
     RegisterComponent,
     CategoryButtonComponent,
     CategoryComponent,
+    SearchbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,6 @@ import { SearchbarComponent } from './category/searchbar/searchbar.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SearchbarComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
