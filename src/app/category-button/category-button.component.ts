@@ -6,10 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./category-button.component.scss']
 })
 export class CategoryButtonComponent {
-  @Input() category!: any;
+  @Input() category!: string;
   @Output() categorySelected = new EventEmitter<string>;
 
   setQuizCategory(): void {
-    this.categorySelected.emit(this.category?.id)
+    this.categorySelected.emit(this.category)
   }
 }
