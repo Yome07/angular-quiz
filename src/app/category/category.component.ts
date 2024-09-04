@@ -8,22 +8,22 @@ import { CategoryService } from '../shared/services/category.service';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
-  categories!: any[]; 
-  categoryFilter!: string;
+  categories = this.categoriesService.categories; 
+  categoryFilter: string = '';
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private categoriesService: CategoryService
-  ) { }
+  ) {
+    this.categoriesService.getAllCategories(this.categoryFilter)
+   }
 
   ngOnInit(): void {
     // ICI ALIMENTER this.categories = l'obserbver du service (recup le name des categ en fct de l input de la barre de recherche)
     this.route.params.subscribe(params => {
       // this.categoryService.;
     });
-
-    this.categoriesService.getAllCategories(this.categoryFilter)
-    this.categories = this.categoriesService.categories
+    console.log(this.categories)
   }
 }

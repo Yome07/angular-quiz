@@ -4,6 +4,8 @@
         <!-- <app-form></app-form> -->
     </section>
     <section class="category_list">
-       <app-category-button *ngFor="let category of categories"></app-category-button>
+       <app-category-button *ngFor="let category of categories"
+        [category]="category.name"
+       ></app-category-button>
     </section>
   </section>
