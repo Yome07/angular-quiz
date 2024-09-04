@@ -2,27 +2,33 @@
   "questions": [
     {
       "id": 1,
-      "questionLabel": "What is a component in Angular?"
+      "questionLabel": "What is a component in Angular?",
+      "category": "c1"
     },
     {
       "id": 2,
-      "questionLabel": "Explain the purpose of the NgModule in Angular."
+      "questionLabel": "Explain the purpose of the NgModule in Angular.",
+      "category": "c1"
     },
     {
       "id": 3,
-      "questionLabel": "How do you create a new Angular application?"
+      "questionLabel": "How do you create a new Angular application?",
+      "category": "c2"
     },
     {
       "id": 4,
-      "questionLabel": "What is data binding in Angular, and what are the different types of data binding?"
+      "questionLabel": "What is data binding in Angular, and what are the different types of data binding?",
+      "category": "c3"
     },
     {
       "id": 5,
-      "questionLabel": "Explain the difference between {{}} (interpolation) and [property] (property binding) in Angular templates."
+      "questionLabel": "Explain the difference between {{}} (interpolation) and [property] (property binding) in Angular templates.",
+      "category": "c4"
     },
     {
       "id": 6,
-      "questionLabel": "What is event binding in Angular, and how is it implemented?"
+      "questionLabel": "What is event binding in Angular, and how is it implemented?",
+      "category": "c5"
     },
     {
       "id": 7,
