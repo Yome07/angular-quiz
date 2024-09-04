@@ -6,6 +6,7 @@
     <section class="category_list">
        <app-category-button *ngFor="let category of categories"
         [category]="category.name"
+        (categorySelected)="setCategorySelected($event)"
        ></app-category-button>
     </section>
   </section>
